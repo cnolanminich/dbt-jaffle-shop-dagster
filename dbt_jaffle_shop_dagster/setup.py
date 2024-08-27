@@ -13,8 +13,8 @@ setup(
         "dagster",
         "dagster-cloud",
         "dagster-dbt",
-        "dbt-duckdb==1.7.5",
-        "dbt-core==1.7.9"
+        "dbt-duckdb",
+        "dbt-core"
     ],
     extras_require={
         "dev": [
