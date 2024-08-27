@@ -10,8 +10,8 @@ setup(
         ],
     },
     install_requires=[
-        "dagster==1.8.3",
-        "dagster-cloud==1.8.3",
+        "dagster==1.8.2",
+        "dagster-cloud==1.8.2",
         "dagster-dbt",
         "dbt-duckdb<1.9",
         "grpcio-health-checking==1.66.0"
