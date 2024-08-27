@@ -14,6 +14,7 @@ setup(
         "dagster-cloud",
         "dagster-dbt",
         "dbt-duckdb<1.9",
+        "grpcio-health-checking==1.64.3"
     ],
     extras_require={
         "dev": [
