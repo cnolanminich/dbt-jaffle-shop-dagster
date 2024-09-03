@@ -26,7 +26,7 @@ jobs:
       - name: Parse cloud workspace
         if: env.ENABLE_FAST_DEPLOYS != 'true'
         id: parse-workspace
-        uses: dagster-io/dagster-cloud-action/actions/utils/parse_workspace@v0.1
+        uses: dagster-io/dagster-cloud-action/actions/utils/parse_workspace@v0.1.44
         with:
           dagster_cloud_file: dagster_cloud.yaml
 
@@ -39,7 +39,7 @@ jobs:
           
       - name: Build and deploy Python executable
         if: env.ENABLE_FAST_DEPLOYS == 'true'
-        uses: dagster-io/dagster-cloud-action/actions/build_deploy_python_executable@pex-v0.1
+        uses: dagster-io/dagster-cloud-action/actions/build_deploy_python_executable@pex-v0.1.44
         with:
           dagster_cloud_file: "$GITHUB_WORKSPACE/project-repo/dagster_cloud.yaml"
           build_output_dir: "$GITHUB_WORKSPACE/build"
@@ -62,7 +62,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Build and deploy to Dagster Cloud serverless
-        uses: dagster-io/dagster-cloud-action/actions/serverless_branch_deploy@v0.1
+        uses: dagster-io/dagster-cloud-action/actions/serverless_branch_deploy@v0.1.44
         with:
           dagster_cloud_api_token: ${{ secrets.DAGSTER_CLOUD_API_TOKEN }}
           location: ${{ toJson(matrix.location) }}
