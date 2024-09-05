@@ -36,8 +36,9 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
           path: project-repo
+          
       - name: Prepare DBT project for deployment
-        if: steps.prerun.outputs.result == 'pex-deploy'
+        if: env.ENABLE_FAST_DEPLOYS == 'true'
         run: |
           pip install pip --upgrade
           cd project-repo
