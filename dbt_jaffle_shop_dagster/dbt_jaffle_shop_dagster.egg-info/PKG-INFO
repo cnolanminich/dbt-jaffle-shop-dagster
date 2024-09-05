@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: dbt_jaffle_shop_dagster
+Version: 0.0.1
+Requires-Dist: dagster
+Requires-Dist: dagster-cloud
+Requires-Dist: dagster-dbt
+Requires-Dist: dbt-duckdb
+Requires-Dist: dbt-core
+Provides-Extra: dev
+Requires-Dist: dagster-webserver; extra == "dev"
