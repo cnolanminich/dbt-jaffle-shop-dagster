@@ -15,6 +15,7 @@ setup(
         "dagster-dbt",
         "dbt-duckdb",
         "dbt-core",
+        "pydantic<2.9",
     ],
     extras_require={
         "dev": [
